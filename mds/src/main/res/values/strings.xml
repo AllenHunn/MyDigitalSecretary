@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Digital Secretary</string>
+    <string name="title_setting_detail">Setting Detail</string>
+    <string name="title_activity_mds_settings">Digital Secretary Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="toggle_label">Overall</string>
+    <string name="name_label">Your Name</string>
+    <string name="codeword_label">Codeword</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="sms_text">"Sorry, %1$s is unavailable right now. Please respond with \"%2$s\" if this is time sensitive. - MDS\nhttp://goo.gl/1kkSIH"</string>
+    <string name="help_text">When your phone is on silent MDS will either ring, respond to texts, or respond to the phone call via text based on your settings. The response will contain your codeword;  that way, if it is truly important, the person attempting to contact you would be able to do so. If the codeword is received, your ringer will sound.\n
+                \n
+                Settings:\n
+                \n
+                *Running/Off - This turns the service on or off. When \"Running\", the service will respond via text or turn your ringer on based on your settings. When off, your phone will function as normal.\n
+                \n
+                *Incoming texts -  This setting determines which texts will be replied to with an \"I\'m busy/codeword\" text. \"Favorite\" contacts may also be \"Starred\" contacts depending on your phone.\n
+                \n
+                *Incoming Calls - This setting determines which contacts will cause your phone to ring from silent.\n
+                \n
+                *Respond to phone calls with text - This option will text known mobile contacts who call you that are not configured to ring. \n
+                \n
+                The \"I\'m busy text\" that will also contain the emergency codeword, is worded as:\n\n%s</string>
+</resources>

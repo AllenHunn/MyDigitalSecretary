@@ -1,0 +1,218 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#020202"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.moonlite.mds.MdsSettings"
+    tools:ignore="MergeRootFrame"
+    android:background="#020202">
+
+    <TextView
+        android:layout_width="79dp"
+        android:layout_height="33dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/toggle_label"
+        android:id="@+id/textView"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/overallToggleBtn"
+        android:layout_centerHorizontal="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entirety of MDS"
+        android:id="@+id/overallToggleBtn"
+        android:layout_gravity="left|top"
+        android:textOn="Running"
+        android:textOff="Off"
+        android:checked="false"
+        android:background="#ffffff"
+        android:onClick="toggleOverall"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/editName"
+        android:layout_alignEnd="@+id/editName" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/name_label"
+        android:id="@+id/textView2"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="29dp">
+        <requestFocus />
+        </TextView>
+
+    <EditText
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editName"
+        android:layout_gravity="left|center_vertical"
+        android:background="#ffffff"
+        android:gravity="bottom"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toLeftOf="@+id/textView2" />
+
+    <EditText
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Codeword"
+        android:ems="10"
+        android:id="@+id/editCodeword"
+        android:layout_gravity="left|center_vertical"
+        android:background="#ffffff"
+        android:gravity="bottom"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/codeword_label"
+        android:id="@+id/textView3"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/editCodeword"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <RadioGroup
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="56dp"
+        android:id="@+id/smsRadioGroup"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3">
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:foreground="#ffffff"
+            android:text="Respond to Everyone"
+            android:onClick="rgSmsClicked"
+            android:id="@+id/rbRespondToEveryone" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:foreground="#ffffff"
+            android:text="Respond to Contacts"
+            android:onClick="rgSmsClicked"
+            android:id="@+id/rbRespondToContacts" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Respond to Favorites"
+            android:onClick="rgSmsClicked"
+            android:foreground="#ffffff"
+            android:id="@+id/rbRespondToFavorites" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Incoming Texts"
+        android:id="@+id/textView4"
+        android:textColor="#ffffff"
+        android:foreground="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/editCodeword"
+        android:layout_alignEnd="@+id/editCodeword" />
+
+    <RadioGroup
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/smsRadioGroup"
+        android:layout_alignLeft="@+id/smsRadioGroup"
+        android:layout_alignStart="@+id/smsRadioGroup"
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Ring for Contacts"
+            android:onClick="rgCallsClicked"
+            android:foreground="#ffffff"
+            android:id="@+id/rbRingForContacts" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Ring for Favorites"
+            android:onClick="rgCallsClicked"
+            android:foreground="#ffffff"
+            android:id="@+id/rbRingForFavorites" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="#ffffff"
+            android:textColor="#ffffff"
+            android:text="Ring for No-one"
+            android:onClick="rgCallsClicked"
+            android:id="@+id/rbRingForNoone" />
+        </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Incoming Calls"
+        android:textColor="#ffffff"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/smsRadioGroup"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respond with Text (Known Mobile Only)"
+        android:textColor="#ffffff"
+        android:id="@+id/cbRespondToKnownMobile"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/textView5"
+        android:onClick="cbChanged"
+        android:foreground="#ffffff"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="22dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtnGetHelp"
+        android:layout_above="@+id/editName"
+        android:layout_alignRight="@+id/cbRespondToKnownMobile"
+        android:layout_alignEnd="@+id/cbRespondToKnownMobile"
+        android:src="@drawable/get_help"
+        android:background="#000000"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/textView2"
+        android:onClick="getHelpClick" />
+</RelativeLayout>
+</ScrollView>

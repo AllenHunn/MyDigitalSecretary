@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000402">
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_height="0dip"
+        android:layout_width="fill_parent"
+        android:layout_weight="80">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="When your phone is on silent, MDS will respond to texts, ring or respond to phone calls based on your settings. The message will contain your codeword, so that if it's truly important you can be alerted. If the codeword is received, your ringer will sound.\n \n Settings:\n\n*On/Off - The overall status of the service. When it's off, it will not reply or ring for anyone.\n\n*Incoming Texts - This determines what texts will be replied to. &quot;Favorite&quot; contacts may also be &quot;Starred&quot; contacts depending on your phone.\n\n*Incoming calls - These settings determine what contacts cause your phone to ring from silent.\n\n*Respond to phone calls with text - This option will text known mobile contacts who call you, but aren't configured to ring. "
+        android:id="@+id/helpText"
+        android:textColor="#ffffff"
+        android:textSize="17dp"
+        android:enabled="false"/>
+</ScrollView>
+    <Button
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:id="@+id/btnClose"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"/>
+</LinearLayout>
